@@ -6,7 +6,7 @@ The instructions here outline the steps we've followed to configure an NVIDIA Je
 
 These instructions are meant to be concise and a reference, but not comprehensive. Familiarity with Linux and Jetson Nano is required. See the refereces section below for more detailed walkthroughs from which many of these steps derive.
 
-[!IMPORTANT] NVIDIA Jetson Nano is a different product from NVIDIA Jetson *Orin* Nano. Jetson Orin Nano is a later generation product that should be easily configured with Ubuntu 22.04 or later following the product user guides. The instructions here apply only to NVIDIA Jetson Nano.
+[!NOTE] NVIDIA Jetson Nano is a different product from NVIDIA Jetson *Orin* Nano. Jetson Orin Nano is a later generation product that should be easily configured with Ubuntu 22.04 or later following the product user guides. The instructions here apply only to NVIDIA Jetson Nano.
 
 Jetson Nano firmware is released as part of the [NVIDIA SDK Manager](https://developer.nvidia.com/sdk-manager). The firmware, Jetson Linux, and Jetson SDK, collectively known as Jetpack, are downloaded and programmed to the device using the SDK Manager. **The latest Jetpack SDK that supports NVIDIA Jetson Nano is Jetpack 4.6.3**
 
@@ -41,8 +41,8 @@ You may skip this step if you are running Ubuntu 18.04.
 Tricking `lsb_release` to report your distribution as 18.04 will bypass the limitation in SDK Manager. First backup your OS release information and then substitute a replacement that feigns 18.04:
 
 ```bash
-sudo cp /usr/lib/os-release/os-release /usr/lib/os-release/os-release-current
-sudo cp /usr/lib/os-release/os-release /usr/lib/os-release/os-release-bionic
+sudo cp /usr/lib/os-release /usr/lib/os-release-current
+sudo cp /usr/lib/os-release /usr/lib/os-release-bionic
 ```
 
 Edit `os-release-bionic` with the relevant release information for Ubuntu 18.04:
