@@ -69,7 +69,7 @@ UBUNTU_CODENAME=bionic
 Replace the system `os-release` file with the Bionic version:
 
 ```bash
-sudo cp /usr/lib/os-release/os-release-bionic /usr/lib/os-release/os-release
+sudo cp /usr/lib/os-release-bionic /usr/lib/os-release
 ```
 
 This file will be restored once SDK Manager has completed flashing.
