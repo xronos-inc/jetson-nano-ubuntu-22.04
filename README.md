@@ -198,7 +198,13 @@ Upgrade to Ubuntu 20.04
 sudo do-release-upgrade
 ```
 
-After the upgrade completes, reboot and log back in.
+After the upgrade completes, reboot and log back in. Ubuntu 20.04 introduced a new network manager, and may need to be installed manually after upgrading for networking to work:
+
+```bash
+sudo apt install network-manager
+```
+
+If `network-manager` was installed by this step, a reboot may be necessary for networking to work.
 
 Set the default Python version to Python 3, which is the default for a fresh installation of Ubuntu 20.04.
 
